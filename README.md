@@ -3,7 +3,7 @@
 <h3 align="center">Web app criado no Hackathon-Decola Luna 🚀</h3>
 
 <p align="center">Este projeto foi desenvolvido nna 10ª edição do Hackathon-Decola, realizado pela empresa Iteris.</p>
-<p align="center"><a href="#tecnologias">Tecnologias</a> | <a herf="#instalacao">Instalação</a> | <a herf="#status">Status</a></p>
+<p align="center"><a href="#tecnologias">Tecnologias</a> | <a href="#instalacao">Instalação</a> | <a href="#status">Status</a></p>
 
 ---
 <a id="tecnologias"></a>
@@ -38,6 +38,9 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
+---
+
 <a id="status"></a>
 ### 🚀 Status:
 > Status do Projeto: Concluido :heavy_check_mark:
+
