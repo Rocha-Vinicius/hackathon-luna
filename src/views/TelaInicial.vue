@@ -5,23 +5,20 @@
       <div class="cards">
         <v-card
           class="mx-auto"
-          max-width="344"
+          max-width="284"
           outlined
       >
         <v-list-item three-line>
           <v-list-item-content>
-            <div class="text-overline mb-4">
+            <div to="/TelaLogin" class="botao">
               VENDEDORES
             </div>
-            <v-list-item-title class="text-h5 mb-1">
-              Headline 5
-            </v-list-item-title>
             <v-list-item-subtitle>Voce empreeendedor terá a facilidade de vender pelo nosso APP</v-list-item-subtitle>
           </v-list-item-content>
 
           <v-list-item-avatar
             tile
-            size="80"
+            size="10"
             color="grey"
           ></v-list-item-avatar>
         </v-list-item>
@@ -37,15 +34,12 @@
         </v-card-actions>
       </v-card>
       <v-card class="card2"
-        max-width="344"
+        max-width="284"
         outlined
       >
         <v-list-item three-line>
           <v-list-item-content>
-            <div class="text-overline mb-4">
-              VENDEDORES
-            </div>
-            <v-list-item-title class="text-h5 mb-1">
+            <v-list-item-title to="/TelaLogin" class="botao2">
               CHOCOLATRAS
             </v-list-item-title>
             <v-list-item-subtitle>Voce chocolatra nao pagará mais caro por um delicioso chocolate</v-list-item-subtitle>
@@ -53,7 +47,7 @@
 
           <v-list-item-avatar
             tile
-            size="80"
+            size="10"
             color="grey"
           ></v-list-item-avatar>
         </v-list-item>
@@ -73,24 +67,6 @@
 </template>
 <script>
   export default {
-    data () {
-      return {
-        items: [
-          {
-            src: '../assets/pascoa1.png',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg',
-          },
-          {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg',
-          },
-        ],
-      }
-    },
   }
 </script>
 <style scoped>
@@ -99,9 +75,15 @@
 }
 .cards{
   display: flex;
+  justify-content: center;
   margin-right: 50px;
+  margin-bottom: 50px;
 }
 .card2{
-  position: ;
+  margin-left:100px;
+}
+.botao{
+  display: flex;
+  justify-content: center;
 }
 </style>
