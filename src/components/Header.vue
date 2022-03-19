@@ -1,55 +1,72 @@
 <template>
-  <div class="mx-auto overflow-hidden" >
-      <v-app-bar
-        color="deep-purple"
-        dark
-      >
+  <div class="app-top-bar">
+
+    <v-app-bar
+      color="blue-grey darken-4"
+      dark
+      text-align="end"
+    >
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-        <v-toolbar-title>Easter eggs Food</v-toolbar-title>
-      </v-app-bar>
+        <v-toolbar-title>
+            <h1>CHOCOLOVERS</h1>
+        </v-toolbar-title>
+    </v-app-bar>
 
-      <v-navigation-drawer
-        v-model="drawer"
-        absolute
-        temporary
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      temporary
+      class="grey lighten-3"
+    >
+      <v-list 
+        nav 
+        
       >
-        <v-list
-          nav
-          dense
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-orange--text text--darken-4"
+          
         >
-          <v-list-item-group
-            v-model="group"
-            active-class="deep-purple--text text--accent-4"
-          >
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-home</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Inicio</v-list-item-title>
-            </v-list-item>
+          <router-link to="/">
+          <v-list-item>
+            <v-list-item-icon >
+              <v-icon color="blue-grey darken-4">mdi-home</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Início</v-list-item-title>
+          </v-list-item>
+          </router-link>
 
+          <router-link to="/login">
+          <v-list-item>
+            <v-list-item-icon>
+              <v-icon color="blue-grey darken-4">mdi-account</v-icon>
+            </v-list-item-icon>
+            <v-list-item-title>Acesso</v-list-item-title>
+          </v-list-item>
+          </router-link>
+
+          <router-link to="/produtos">
             <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-account</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Logar</v-list-item-title>
+                <v-list-item-icon>
+                  <v-icon color="blue-grey darken-4">mdi-store</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>Produtos</v-list-item-title>
             </v-list-item>
+          </router-link>
+
+          <router-link to="/QuemSomos">
             <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-store</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Produtos</v-list-item-title>
+                <v-list-item-icon>
+                    <v-icon color="blue-grey darken-4">mdi-account-group</v-icon>
+                </v-list-item-icon>
+                <v-list-item-title>Quem somos</v-list-item-title>
             </v-list-item>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-account-group</v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>Quem somos</v-list-item-title>
-            </v-list-item>
-          </v-list-item-group>
-        </v-list>
-      </v-navigation-drawer>
+          </router-link>
+          
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
   </div>
 </template>
 
@@ -58,10 +75,23 @@
     data: () => ({
       drawer: false,
       group: null,
-    }),
+    })
   }
 </script>
 
 <style scoped>
-
+.app-top-bar {
+  font-family: 'Oswald', sans-serif;
+  text-transform: none;
+}
+.app-top-bar a {
+  text-decoration: none;
+}
+h1 {
+  font-size: 22px;
+  padding-left: 150px;
+}
+.nav {
+  background-color: grey;
+}
 </style>
