@@ -1,5 +1,7 @@
 <template>
-  <v-form
+  <v-container class="caixa mx-auto ma-3">
+  <h2 class="text-center ma-4">LOGIN</h2>
+    <v-form
     ref="form"
     v-model="valid"
     lazy-validation
@@ -41,20 +43,13 @@
     </v-btn>
 
     <v-btn
-      color="error"
-      class="mr-4"
-      @click="reset"
-    >
-      limpar
-    </v-btn>
-
-    <v-btn
       color="warning"
       @click="resetValidation"
     >
       Cadastrar
     </v-btn>
   </v-form>
+  </v-container>
 </template>
 
 <script>
@@ -69,9 +64,8 @@
       show1: false,
       password: 'Password',
       rules: {
-        required: value => !!value || 'Required.',
-        min: v => v.length >= 8 || 'Min 8 characters',
-        emailMatch: () => (`The email and password you entered don't match`),
+        required: value => !!value || 'A senha é necessária.',
+        min: v => v.length >= 8 || 'É necessário um login com 8 caracteres.',
       },
       checkbox: false
     }),
@@ -80,11 +74,8 @@
       validate () {
         this.$refs.form.validate()
       },
-      reset () {
-        this.$refs.form.reset()
-      },
-      resetValidation () {
-        this.$refs.form.resetValidation()
+      Cadastro () {
+        this.$refs.form.Cadastrar()
       },
     },
   }
