@@ -1,4 +1,5 @@
-    <template>
+<template>
+    <div class="space">
         <v-card class="mx-auto">
             <v-container fluid >
                 <v-row dense>
@@ -33,7 +34,8 @@
                 </v-row>
             </v-container>
         </v-card>
-    </template>
+    </div>
+</template>
 
 <script>
     export default {
@@ -56,7 +58,7 @@
     </script>
 
     <style scoped>
-        .mx-auto{
-            
+        .space{
+ 
         }
     </style>
