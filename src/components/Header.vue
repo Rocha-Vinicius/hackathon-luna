@@ -26,7 +26,7 @@
               <v-list-item-icon>
                 <v-icon>mdi-home</v-icon>
               </v-list-item-icon>
-              <v-list-item-title>Sobre o APP</v-list-item-title>
+              <v-list-item-title>Inicio</v-list-item-title>
             </v-list-item>
 
             <v-list-item>
@@ -34,6 +34,18 @@
                 <v-icon>mdi-account</v-icon>
               </v-list-item-icon>
               <v-list-item-title>Logar</v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon>mdi-account</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>Produtos</v-list-item-title>
+            </v-list-item>
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon>mdi-account</v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>Quem somos</v-list-item-title>
             </v-list-item>
           </v-list-item-group>
         </v-list>
