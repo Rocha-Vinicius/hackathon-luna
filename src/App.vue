@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav>
+    <nav class="space"> 
       <Header/>
     </nav>
     <router-view/>
@@ -29,17 +29,10 @@ import Footer from './components/Footer.vue'
   text-align: center;
   color: #2c3e50;
 }
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+.space{
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
 }
+
 </style>

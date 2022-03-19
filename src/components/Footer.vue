@@ -1,52 +1,26 @@
 <template>
-  <v-footer
-    dark
-    padless
-  >
-    <v-card
-      flat
-      tile
-      class="indigo lighten-1 white--text text-center"
-    >
-      <v-card-text>
-        <v-btn
-          v-for="icon in icons"
-          :key="icon"
-          class="mx-4 white--text"
-          icon
-        >
-          <v-icon size="24px">
-            {{ icon }}
-          </v-icon>
-        </v-btn>
-      </v-card-text>
-
-      <v-card-text class="white--text pt-0">
-        Phasellus feugiat arcu sapien, et iaculis ipsumid ulontes, nascetur ridiculus mus.lontes, nascetur ridiculus mus.
-      </v-card-text>
-
-      <v-divider></v-divider>
-
-      <v-card-text class="white--text">
-        {{ new Date().getFullYear() }} — <strong>Hackaton Iteris</strong>
-      </v-card-text>
-    </v-card>
-  </v-footer>
+  <div class="footer">
+    <v-footer padless>
+      <v-col
+        class="text-center"
+        cols="12"
+      >
+        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+      </v-col>
+    </v-footer>
+  </div>
 </template>
 
 <script>
   export default {
-    data: () => ({
-      icons: [
-        'mdi-facebook',
-        'mdi-twitter',
-        'mdi-linkedin',
-        'mdi-instagram',
-      ],
-    }),
   }
 </script>
 
 <style scoped>
-
+.footer{
+  margin-top: 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
 </style>
