@@ -1,9 +1,9 @@
 <template>
     <v-container>
         <h2 class="text-h5 text-center mb-3 mt-5">Quem somos</h2>
-         <v-img class="inicio-imagem mb-4" src="https://i.ytimg.com/vi/5QIsyuVqbNQ/mqdefault.jpg">
+         <v-img class="inicio-imagem mb-5" src="https://i.ytimg.com/vi/5QIsyuVqbNQ/mqdefault.jpg">
         </v-img>
-        <p>Somos a equipe 08 da 10º Edição Luna do Hackathon Decola Iteris.
+        <p>Somos a equipe 08 da 10º Edição Luna do Hackathon Decola
             <a href="www.iteris.com.br">Iteris</a>.</p>
         
         <p>Conheça os desenvolvedores</p>
@@ -13,7 +13,7 @@
                 <tbody>
                 <tr v-for="desenvolvedor of desenvolvedores" :key="desenvolvedor.id" >
                     <td>
-                        <v-avatar size=62 mb-50 mt-5>
+                        <v-avatar size=52 mb-50 mt-5>
                             <img
                                 :src="desenvolvedor.avatar" 
                                 :alt="desenvolvedor.nome"
