@@ -56,4 +56,7 @@
     </script>
 
     <style scoped>
+        .mx-auto{
+            
+        }
     </style>

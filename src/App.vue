@@ -2,7 +2,6 @@
   <div id="app">
     <nav>
       <Header/>
-      <TelaInicial />
     </nav>
     <router-view/>
     <Footer/>
@@ -12,14 +11,12 @@
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
-import TelaInicial from './components/TelaInicial.vue'
 
   export default {
       name: 'App',
       components: {
         Header,
         Footer,
-        TelaInicial,
   }
 }
 </script>
