@@ -1,19 +1,24 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import TelaLogin from '../views/TelaLogin.vue'
-import QuemSomos from '../views/QuemSomos.vue'
+import Produtos from '../views/Produtos.vue'
+import TelaInicial from '../views/TelaInicial.vue'
+import TelaLogin from '../views/TelaLogin.Vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: '/produtos',
+    name: 'produtos',
+    component: Produtos
   },
   {
-    path: '/TelaLogin',
+    path: '/',
+    name: 'TelaInicial',
+    component: TelaInicial
+  },
+  {
+    path: '/login',
     name: 'TelaLogin',
     component: TelaLogin
   },
