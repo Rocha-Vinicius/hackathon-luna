@@ -2,7 +2,7 @@
 
 <h3 align="center">Web app criado no Hackathon-Decola Luna 🚀</h3>
 
-<p align="center">Este projeto foi desenvolvido nna 10ª edição do Hackathon-Decola, realizado pela empresa Iteris.</p>
+<p align="center">Este projeto foi desenvolvido na 10ª edição do Hackathon-Decola, realizado pela empresa Iteris.</p>
 <p align="center"><a href="#tecnologias">Tecnologias</a> | <a href="#instalacao">Instalação</a> | <a href="#status">Status</a></p>
 
 ---

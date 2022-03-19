@@ -1,39 +1,39 @@
 <template>
-  <main>
-  <div id="app">
-    <nav class="space"> 
-      <Header/>
-    </nav>
-    <router-view/>
-  </div>
-  <Footer/>
-  </main>
+  <v-app>
+    <Header />
+    <v-main>
+      <router-view/>
+    </v-main>
+    <Footer />
+  </v-app>
 </template>
 
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
-  export default {
-      name: 'App',
-      components: {
-        Header,
-        Footer,
+
+export default {
+  name: 'App',
+  components: {
+  Header,
+  Footer,
   }
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap');
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to right, #FF725E, #5ebfff);
-  text-align: center;
   color: #2c3e50;
-  height: auto;
-  min-height: 100vh;
+  font-family: 'Oswald', sans-serif;
+  background-image: linear-gradient(to right, #FF725E, #5ebfff);
 }
-.space{
+a {
+  text-decoration: none;
+} 
+
+.space {
   display: flex;
   flex-direction: column;
 }

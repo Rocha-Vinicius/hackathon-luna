@@ -1,26 +1,27 @@
 <template>
-    <v-container>
-        <h2 class="text-h5 text-center mb-3 mt-5">Quem somos</h2>
+    <v-container class="quem-somos">
+        <h1 class=" text-center mb-3 mt-5">QUEM SOMOS</h1>
          <v-img class="inicio-imagem mb-4" src="https://i.ytimg.com/vi/5QIsyuVqbNQ/mqdefault.jpg">
         </v-img>
         <p>Somos a equipe 08 da 10º Edição Luna do Hackathon Decola Iteris.
-            <a href="www.iteris.com.br">Iteris</a>.</p>
         
-        <p>Conheça os desenvolvedores</p>
+        <p class="link"><a href="www.iteris.com.br">Iteris</a>.</p>
+        
+        <p>Conheça os desenvolvedores: </p>
 
         <v-simple-table>
             <div>
                 <tbody>
                 <tr v-for="desenvolvedor of desenvolvedores" :key="desenvolvedor.id" >
                     <td>
-                        <v-avatar size=62 mb-50 mt-5>
+                        <v-avatar size=60 mb-50 mt-5>
                             <img
                                 :src="desenvolvedor.avatar" 
                                 :alt="desenvolvedor.nome"
                             >
                         </v-avatar>
                     </td>
-                    <td><a :href="desenvolvedor.link"> {{desenvolvedor.nome}}</a></td>
+                    <td pl-5 ><a :href="desenvolvedor.link"> {{desenvolvedor.nome}}</a></td>
                 </tr>
                 </tbody>
             </div>
@@ -76,6 +77,17 @@ export default {
 </script>
 
 <style scoped>
+    .quem-somos {
+        color: #2c3e50;
+        font-family: 'Oswald', sans-serif;
+        background-color: #EEEEEE;
+        text-align: center;
+    }
+    
+    .quem-somos a {
+        text-decoration: none;
+    }
+
     .inicio-imagem {
         border-radius: 5px;
     }
