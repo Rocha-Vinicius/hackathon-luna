@@ -9,7 +9,6 @@
                             color="teal lighten-1"
                             elevation="2"
                             medium
-                            outlined
                             rounded
                             @click="cliente"
                         >
@@ -20,7 +19,6 @@
                             color="teal lighten-1"
                             elevation="2"
                             medium
-                            outlined
                             rounded
                             
                         >
@@ -63,7 +61,6 @@
                             color="teal lighten-1"
                             elevation="2"
                             medium
-                            outlined
                             rounded
                             @click="limpar"
                         >
@@ -74,7 +71,7 @@
                             color="teal lighten-1"
                             elevation="2"
                             medium
-                            outlined
+                           
                             rounded
                             :disabled= "loading"
                         >
@@ -134,27 +131,20 @@ export default {
 </script>
 
 <style>
-.div-left{
-  width:20%;
-  min-height:auto;
-  position:relative;
-  float:left;
-}
-
-.div-right{
-  width:20%;
-  min-height:auto;
-  position:relative;
-  float:right
-}
 
 .Cadastro {
     text-align: center;
     margin: auto;
     padding: 10px;
+    margin-top: 10px;
     margin-bottom: 100px;
+}
+
+btn{
+    background-image: linear-gradient(to right, #FF725E, #5ebfff);
 }
 .botoes a{
   text-decoration: none;
+  margin-top: 20px;
 }
 </style>
