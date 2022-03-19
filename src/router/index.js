@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Cadastro from '../views/Cadastro.vue'
-import ValidaCadastro from '../views/ValidaCadastro.vue'
 import Produtos from '../views/Produtos.vue'
 import TelaInicial from '../views/TelaInicial.vue'
 import TelaLogin from '../views/TelaLogin'
@@ -16,11 +15,6 @@ const routes = [
     path: '/cadastro',
     name: 'cadastro',
     component: Cadastro
-  },
-  {
-    path: '/validacadastro',
-    name: 'ValidaCadastro',
-    component: ValidaCadastro
   },
   {
     path: '/produtos',
