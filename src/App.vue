@@ -27,6 +27,8 @@ import Footer from './components/Footer.vue'
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: auto;
+  min-height: 100vh;
 }
 .space{
   display: flex;
