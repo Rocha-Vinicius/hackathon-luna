@@ -30,7 +30,6 @@ import Footer from './components/Footer.vue'
   color: #2c3e50;
 }
 .space{
-  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
 }
