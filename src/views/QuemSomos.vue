@@ -1,13 +1,15 @@
 <template>
     <v-container>
         <h2 class="text-h5 text-center mb-3 mt-5">Quem somos</h2>
-        <v-img class="inicio-imagem mb-4" src="https://i.ytimg.com/vi/5QIsyuVqbNQ/mqdefault.jpg"></v-img>
-        <p>Somos a equipe 08 da 10º Edição do Hackathon Decola-Luna da Iteris.<a href="www.iteris.com.br">Iteris</a>.</p>
+         <v-img class="inicio-imagem mb-4" src="https://i.ytimg.com/vi/5QIsyuVqbNQ/mqdefault.jpg">
+        </v-img>
+        <p>Somos a equipe 08 da 10º Edição Luna do Hackathon Decola Iteris.
+            <a href="www.iteris.com.br">Iteris</a>.</p>
         
         <p>Conheça os desenvolvedores</p>
 
         <v-simple-table>
-            <template>
+            <div>
                 <tbody>
                 <tr v-for="desenvolvedor of desenvolvedores" :key="desenvolvedor.id" >
                     <td>
@@ -21,7 +23,7 @@
                     <td><a :href="desenvolvedor.link"> {{desenvolvedor.nome}}</a></td>
                 </tr>
                 </tbody>
-            </template>
+            </div>
         </v-simple-table>
 
     </v-container>
@@ -54,13 +56,13 @@ export default {
                     "avatar": "https://github.com/MarianaThomaz.png"
                 },
                 {
-                    "id": 4,
+                   "id": 4,
                     "link": "https://github.com/RhamandaLima",
                     "nome": "Rhamanda Lima",
                     "avatar": "https://avatars.githubusercontent.com/u/85266632?v=4"
                 },
                 {
-                    "id": 9,
+                    "id": 5,
                     "link": "https://github.com/Rocha-Vinicius/",
                     "nome": "Vinicius Rocha",
                     "avatar": "https://avatars.githubusercontent.com/u/68117720?v=4"
