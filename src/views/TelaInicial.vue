@@ -1,79 +1,73 @@
 <template>
   <v-container>
-     <v-carousel height="700" :show-arrows="false">
-      <v-carousel-item 
-        v-for="(item,i) in items"
-        :key="i"
-        :src="item.src"
-      ></v-carousel-item>
-    </v-carousel>
+      <v-img src="../assets/pascoa1.png"/>
+
       <div class="cards">
-      <v-card
-        class="mx-auto"
+        <v-card
+          class="mx-auto"
+          max-width="344"
+          outlined
+      >
+        <v-list-item three-line>
+          <v-list-item-content>
+            <div class="text-overline mb-4">
+              VENDEDORES
+            </div>
+            <v-list-item-title class="text-h5 mb-1">
+              Headline 5
+            </v-list-item-title>
+            <v-list-item-subtitle>Voce empreeendedor terá a facilidade de vender pelo nosso APP</v-list-item-subtitle>
+          </v-list-item-content>
+
+          <v-list-item-avatar
+            tile
+            size="80"
+            color="grey"
+          ></v-list-item-avatar>
+        </v-list-item>
+
+        <v-card-actions>
+          <v-btn
+            outlined
+            rounded
+            text
+          >
+            quero vender
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+      <v-card class="card2"
         max-width="344"
         outlined
-    >
-      <v-list-item three-line>
-        <v-list-item-content>
-          <div class="text-overline mb-4">
-            VENDEDORES
-          </div>
-          <v-list-item-title class="text-h5 mb-1">
-            Headline 5
-          </v-list-item-title>
-          <v-list-item-subtitle>Voce empreeendedor terá a facilidade de vender pelo nosso APP</v-list-item-subtitle>
-        </v-list-item-content>
+      >
+        <v-list-item three-line>
+          <v-list-item-content>
+            <div class="text-overline mb-4">
+              VENDEDORES
+            </div>
+            <v-list-item-title class="text-h5 mb-1">
+              CHOCOLATRAS
+            </v-list-item-title>
+            <v-list-item-subtitle>Voce chocolatra nao pagará mais caro por um delicioso chocolate</v-list-item-subtitle>
+          </v-list-item-content>
 
-        <v-list-item-avatar
-          tile
-          size="80"
-          color="grey"
-        ></v-list-item-avatar>
-      </v-list-item>
+          <v-list-item-avatar
+            tile
+            size="80"
+            color="grey"
+          ></v-list-item-avatar>
+        </v-list-item>
 
-      <v-card-actions>
-        <v-btn
-          outlined
-          rounded
-          text
-        >
-          quero vender
-        </v-btn>
-      </v-card-actions>
-    </v-card>
-    <v-card
-      class="mx-auto"
-      max-width="344"
-      outlined
-    >
-      <v-list-item three-line>
-        <v-list-item-content>
-          <div class="text-overline mb-4">
-            VENDEDORES
-          </div>
-          <v-list-item-title class="text-h5 mb-1">
-            CHOCOLATRAS
-          </v-list-item-title>
-          <v-list-item-subtitle>Voce chocolatra nao pagará mais caro por um delicioso chocolate</v-list-item-subtitle>
-        </v-list-item-content>
-
-        <v-list-item-avatar
-          tile
-          size="80"
-          color="grey"
-        ></v-list-item-avatar>
-      </v-list-item>
-
-      <v-card-actions>
-        <v-btn
-          outlined
-          rounded
-          text
-        >
-          Quero chocolate
-        </v-btn>
-      </v-card-actions>
-    </v-card>
+        <v-card-actions>
+          <v-btn
+            outlined
+            rounded
+            text
+          >
+            Quero chocolate
+          </v-btn>
+        </v-card-actions>
+      </v-card>
     </div>
   </v-container>
 </template>
@@ -83,7 +77,7 @@
       return {
         items: [
           {
-            src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg',
+            src: '../assets/pascoa1.png',
           },
           {
             src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg',
@@ -103,7 +97,11 @@
 .h1{
   position: absolute;
 }
-.card{
+.cards{
   display: flex;
+  margin-right: 50px;
+}
+.card2{
+  position: ;
 }
 </style>
