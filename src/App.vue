@@ -1,11 +1,13 @@
 <template>
+  <main>
   <div id="app">
     <nav class="space"> 
       <Header/>
     </nav>
     <router-view/>
-    <Footer/>
   </div>
+  <Footer/>
+  </main>
 </template>
 
 <script>
