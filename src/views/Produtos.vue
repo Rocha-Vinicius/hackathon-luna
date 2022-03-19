@@ -15,6 +15,7 @@
         v-for="produto of listaProdutos"
         :key="produto.id"
         :cols="12"
+        :sm="6"
         :md="6"
         :lg="3"
         >
