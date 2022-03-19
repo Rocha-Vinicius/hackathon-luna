@@ -1,5 +1,6 @@
 <template>
-  <v-container>
+  <v-container class="tela-inicial">
+    <h1>ChocoLovers</h1>
       <v-img src="../assets/pascoa1.png"/>
 
       <div class="cards">
@@ -10,56 +11,54 @@
       >
         <v-list-item three-line>
           <v-list-item-content>
-            <div to="/TelaLogin" class="botao">
+            
+            <div class="botao">
               VENDEDORES
             </div>
-            <v-list-item-subtitle>Voce empreeendedor terá a facilidade de vender pelo nosso APP</v-list-item-subtitle>
+            
+            <v-list-item-subtitle>Encontre o seu ChocoLover!</v-list-item-subtitle>
           </v-list-item-content>
-
-          <v-list-item-avatar
-            tile
-            size="10"
-            color="grey"
-          ></v-list-item-avatar>
         </v-list-item>
 
         <v-card-actions>
+          <router-link to="/login">
           <v-btn
             outlined
             rounded
             text
+            class="btn"
           >
             quero vender
           </v-btn>
+          </router-link>
         </v-card-actions>
       </v-card>
       <v-card class="card2"
-        max-width="284"
+        max-height="284px"
         outlined
       >
         <v-list-item three-line>
           <v-list-item-content>
-            <v-list-item-title to="/TelaLogin" class="botao2">
+            
+            <v-list-item-title class="botao2">
               CHOCOLATRAS
             </v-list-item-title>
-            <v-list-item-subtitle>Voce chocolatra nao pagará mais caro por um delicioso chocolate</v-list-item-subtitle>
+            
+            <v-list-item-subtitle>O cantinho do chocólatra!</v-list-item-subtitle>
           </v-list-item-content>
-
-          <v-list-item-avatar
-            tile
-            size="10"
-            color="grey"
-          ></v-list-item-avatar>
         </v-list-item>
 
         <v-card-actions>
+          <router-link to="/login">
           <v-btn
             outlined
             rounded
             text
+            class="btn"
           >
             Quero chocolate
           </v-btn>
+           </router-link>
         </v-card-actions>
       </v-card>
     </div>
@@ -70,20 +69,32 @@
   }
 </script>
 <style scoped>
-.h1{
-  position: absolute;
-}
-.cards{
-  display: flex;
-  justify-content: center;
-  margin-right: 50px;
-  margin-bottom: 50px;
-}
-.card2{
-  margin-left:100px;
-}
-.botao{
-  display: flex;
-  justify-content: center;
-}
+
+  .tela-inicial {
+    text-align: center;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .cards {
+    display: flex;
+    
+    margin-right: 20px;
+    margin-bottom: 50px;
+  }
+
+  .cards2 {
+  justify-content: space-around;
+  }
+ 
+  .botao {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn {
+    background-color: #5ebfff;
+  }
 </style>

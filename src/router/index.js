@@ -9,17 +9,6 @@ import QuemSomos from '../views/QuemSomos'
 Vue.use(VueRouter)
 
 const routes = [
-
-  {
-    path: '/cadastro',
-    name: 'cadastro',
-    component: Cadastro
-  },
-  {
-    path: '/produtos',
-    name: 'produtos',
-    component: Produtos
-  },
   {
     path: '/',
     name: 'TelaInicial',
@@ -30,6 +19,16 @@ const routes = [
     path: '/login',
     name: 'TelaLogin',
     component: TelaLogin
+  },
+  {
+    path: '/cadastro',
+    name: 'cadastro',
+    component: Cadastro
+  },
+  {
+    path: '/produtos',
+    name: 'produtos',
+    component: Produtos
   },
   {
     path: '/QuemSomos',
