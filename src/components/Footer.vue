@@ -18,9 +18,6 @@
 
 <style scoped>
 .footer{
-  margin-top: 50px;
-  position: absolute;
-  bottom: 0;
   width: 100%;
 }
 </style>

@@ -1,35 +1,50 @@
 <template>
+
   <div class="Cadastro"> 
-    <h2 class="text-h5 text-center mb-3 mt-5">Cadastro</h2>
+    <h2 class="text-h5 text-center mb-5 mt-5">Cadastro</h2>
 
-        <div class="mb-0">
-            <div class="div-left">
-                <v-btn
-                elevation="9"
-                rounded
-                >QueroComprar
-                </v-btn>
-            </div>
-            <div class="div-right" >
-                <v-btn 
-                elevation="9"
-                rounded
-                >QueroVender</v-btn>
-            </div>
-        </div>
-
+                 <div class="botoes">
+                        <v-btn
+                            class="Compra"
+                            color="teal lighten-1"
+                            elevation="2"
+                            medium
+                            outlined
+                            rounded
+                            @click="cliente"
+                        >
+                            Quero Comprar
+                        </v-btn> 
+                        <v-btn @click="vendedor"
+                            class="Vender"
+                            color="teal lighten-1"
+                            elevation="2"
+                            medium
+                            outlined
+                            rounded
+                            
+                        >
+                            Quero Vender
+                        </v-btn>
+                       
+                    </div>  
       <v-form class="registro-box" ref="form" >
-                    <v-text-field v-model="nome" label="Usuário" required>
+                    <v-text-field v-if="empresa" v-model="nomeEmpresa" label="Nome da Empresa" required>
                     </v-text-field>
-                    <v-text-field v-model="password" type="password" label="Senha" required>
+
+                    <v-text-field v-else v-model="nome" label="Usuário" required>
                     </v-text-field>
                    
+                    <v-text-field v-model="password" type="password" label="Senha" required>
                     </v-text-field>
 
-                    <v-text-field v-model="cnpj" label="Cnpj" required>
+                    <v-text-field v-model="telefone" type="number" label="Telefone" required>
                     </v-text-field>
-                    
-                    <v-text-field v-model="email" label="E-mail" required>
+                   
+                    <v-text-field v-if="doc" type="number" v-model="cnpj" label="Cnpj" required>
+                    </v-text-field>
+                   
+                    <v-text-field v-model="email" type="email" label="E-mail" required>
                     </v-text-field>
                     <v-text-field v-model="endereco" label="Endereço" required>
                     </v-text-field>
@@ -40,7 +55,7 @@
                         required
                     >
                     </v-checkbox>
-    </v-form>  
+        </v-form>  
     
       <div class="botoes">
                         <v-btn
@@ -76,20 +91,31 @@ export default {
     data() {
         return {
             nome: "",
+            nomeEmpresa: "",
             password: "",
-            numeroTelefone: "",
+            telefone: "",
             email: "",
             endereco: "",
             cnpj:"",
+            doc: false,
+            empresa: false,
             checkbox: false,
             loading:false
         };
     },
     methods: {
+        vendedor(){
+            this.doc=true
+            this.empresa=true
+        },
+        cliente(){
+            this.doc=false
+            this.empresa=false
+        },
         push() {
           this.loading=true
           setTimeout(()=>{
-          this.$router.push('/analisecadastro')
+          this.$router.push('/login')
           },1000)
            
 
@@ -109,20 +135,20 @@ export default {
 
 <style>
 .div-left{
-  width:49%;
+  width:20%;
   min-height:auto;
   position:relative;
   float:left;
 }
 
 .div-right{
-  width:49%;
+  width:20%;
   min-height:auto;
   position:relative;
   float:right
 }
 
-.CadastroUsuario {
+.Cadastro {
     text-align: center;
     margin: auto;
     padding: 10px;

@@ -13,7 +13,6 @@
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
-
   export default {
       name: 'App',
       components: {
@@ -30,11 +29,11 @@ import Footer from './components/Footer.vue'
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: auto;
+  min-height: 100vh;
 }
 .space{
-  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
 }
-
 </style>
