@@ -1,9 +1,10 @@
 <template>
   <main>
-  <div id="app">
     <nav class="space"> 
       <Header/>
     </nav>
+  <div id="app">
+    
     <router-view/>
   </div>
   <Footer/>

@@ -19,35 +19,32 @@
         :md="6"
         :lg="3"
         >
-        <v-card :id="produto.id">
+        <v-card :id="produto.id" class="teste">
             <v-img
             :src="produto.imagem"
             class="white--text align-end"
-            gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
             height="200px"
             >
             </v-img>
 
-            <v-card-title v-text="produto.nome"></v-card-title>
-
+            <v-card-title class="nomeproduto">
+                {{produto.nome}}
+            </v-card-title>
+            
+            <div>
             <v-card-actions>
             <v-btn icon @click=contadorProdutos()>
                 <v-icon>mdi-cart</v-icon>
             </v-btn>
-            <v-card-subtitle> R$: {{ produto.preco }} </v-card-subtitle>
-            <v-btn color="orange lighten-2" text> Detalhes </v-btn>
-
-            <v-btn icon @click="show = !show">
-                <v-icon>{{
-                show ? "mdi-chevron-up" : "mdi-chevron-down"
-                }}</v-icon>
-            </v-btn>
+            <v-card-subtitle class="preco"> R$: {{ produto.preco }} </v-card-subtitle>
             </v-card-actions>
-            <v-expand-transition>
-            <div v-show="show">
-                <v-divider></v-divider>
+            </div>
 
-                <v-card-text>
+            <v-expand-transition>
+            <div>
+                <v-divider></v-divider>
+                <v-card-text class="descricao">
+                <p>Detalhes:</p>
                 <p>Vendedor: {{ produto.local.nome }}</p>
                 <p>Endereço: {{ produto.local.endereco }}</p>
                 </v-card-text>
@@ -83,6 +80,9 @@ created() {
 methods:{
         contadorProdutos(){
             this.contador++
+        },
+        expandirDetalhes(){
+            this.show = !this.show;
         }
 }
 };
@@ -91,5 +91,17 @@ methods:{
 <style scoped>
     .carrinho{
         text-align: right;
+    };
+    .infosprodutos{
+        align-content: right;
+    }
+    .preco{
+        font-size: 25px;
+    }
+    .descricao{
+        font-size: 15px;
+    }
+    .nomeproduto{
+        font-size: 30px;
     }
 </style>

@@ -1,7 +1,5 @@
 <template>
-  <v-card
-    class="mx-auto overflow-hidden"
-  >
+  <div>
     <v-app-bar
       color="deep-purple"
       dark
@@ -14,7 +12,7 @@
     <v-navigation-drawer
       v-model="drawer"
       absolute
-      temporary
+      tempoary
     >
       <v-list
         nav
@@ -40,7 +38,7 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-  </v-card>
+</div>
 </template>
 Title
 
