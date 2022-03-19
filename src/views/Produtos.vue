@@ -1,27 +1,24 @@
 <template>
 <v-card class="mx-auto">
     <v-card class="mx-auto">
-            <p class="carrinho">
-            <v-btn icon>
-                <div>
-                    {{contadorProdutos}}
-                </div>
-                <v-icon>mdi-cart</v-icon>
-            </v-btn>
-            </p>
+        <p class="carrinho">
+        <v-btn icon>
+        <div>
+            {{ contador }}
+        </div>
+        <v-icon>mdi-cart</v-icon>
+        </v-btn>
+    </p>
     <v-container fluid>
     <v-row dense>
         <v-col
         v-for="produto of listaProdutos"
         :key="produto.id"
-        :cols="6"
-        :xs="6"
-        :sm="4"
-        :md="3"
-        :lg="2"
-        :xl="1"
+        :cols="12"
+        :md="6"
+        :lg="3"
         >
-        <v-card class="teste">
+        <v-card :id="produto.id">
             <v-img
             :src="produto.imagem"
             class="white--text align-end"
@@ -33,7 +30,7 @@
             <v-card-title v-text="produto.nome"></v-card-title>
 
             <v-card-actions>
-            <v-btn icon @click="contarProdutos()">
+            <v-btn icon @click=contadorProdutos()>
                 <v-icon>mdi-cart</v-icon>
             </v-btn>
             <v-card-subtitle> R$: {{ produto.preco }} </v-card-subtitle>
@@ -64,6 +61,7 @@
 </template>
 
 <script>
+
 export default {
 name: "Produtos",
 data() {
@@ -71,7 +69,7 @@ data() {
     listaProdutos: [],
     url: "https://it3-hbn-default-rtdb.firebaseio.com/ovosPascoa.json",
     show: false,
-    contadorProdutos: 0
+    contador: 0
     };
 },
 created() {
@@ -82,9 +80,9 @@ created() {
     });
 },
 methods:{
-    contarProdutos(){
-        this.contadorProdutos++
-    }
+        contadorProdutos(){
+            this.contador++
+        }
 }
 };
 </script>

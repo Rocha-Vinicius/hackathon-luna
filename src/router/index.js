@@ -7,7 +7,6 @@ import TelaInicial from '../views/TelaInicial.vue'
 import TelaLogin from '../views/TelaLogin'
 import QuemSomos from '../views/QuemSomos'
 
-
 Vue.use(VueRouter)
 
 const routes = [
@@ -42,7 +41,8 @@ const routes = [
     path: '/QuemSomos',
     name: 'QuemSomos',
     component: QuemSomos
-  }
+  },
+    
 ]
 
 const router = new VueRouter({
