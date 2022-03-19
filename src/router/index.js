@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Produtos from '../views/Produtos.vue'
 import TelaInicial from '../views/TelaInicial.vue'
-import TelaLogin from '../views/TelaLogin.vue'
+import TelaLogin from '../views/TelaLogin'
+import QuemSomos from '../views/QuemSomos'
 
 Vue.use(VueRouter)
 
