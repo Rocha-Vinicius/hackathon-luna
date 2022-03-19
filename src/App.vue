@@ -2,6 +2,7 @@
   <div id="app">
     <nav>
       <Header/>
+      <TelaInicial />
     </nav>
     <router-view/>
     <Footer/>
@@ -11,12 +12,14 @@
 <script>
 import Header from './components/Header.vue'
 import Footer from './components/Footer.vue'
+import TelaInicial from './components/TelaInicial.vue'
 
   export default {
       name: 'App',
       components: {
         Header,
         Footer,
+        TelaInicial,
   }
 }
 </script>
@@ -30,16 +33,5 @@ import Footer from './components/Footer.vue'
   color: #2c3e50;
 }
 
-nav {
-  padding: 30px;
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>
