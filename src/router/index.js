@@ -1,14 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import Cadastro from '../views/Cadastro.vue'
+import ValidaCadastro from '../views/ValidaCadastro.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
+
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: '/cadastro',
+    name: 'cadastro',
+    component: Cadastro
+  },
+  {
+    path: '/validacadastro',
+    name: 'ValidaCadastro',
+    component: ValidaCadastro
   },
 ]
 
