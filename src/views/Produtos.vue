@@ -2,7 +2,7 @@
         <v-card class="mx-auto">
             <v-container fluid >
                 <v-row dense>
-                <v-col v-for="produto of listaProdutos" :key="produto.id" :cols=6 lg=3 mid=4 sm=6>
+                <v-col v-for="produto of listaProdutos" :key="produto.id" :cols=6 :xs=6 :sm=4 :md=3 :lg=2 :xl=1 >
                 <v-card class="teste">
                     <v-img
                     :src="produto.imagem"
