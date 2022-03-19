@@ -84,7 +84,7 @@ export default {
         text-align: center;
     }
     
-    .quem-somos a {
+    a {
         text-decoration: none;
     }
 
