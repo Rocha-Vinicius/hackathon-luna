@@ -1,12 +1,14 @@
 <template>
-  <v-footer padless>
-    <v-col
-      class="text-center"
-      cols="12"
-    >
-      {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
-    </v-col>
-  </v-footer>
+  <div class="footer">
+    <v-footer padless>
+      <v-col
+        class="text-center"
+        cols="12"
+      >
+        {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+      </v-col>
+    </v-footer>
+  </div>
 </template>
 
 <script>
@@ -15,7 +17,10 @@
 </script>
 
 <style scoped>
-.largura{
-    min-width: 300px;
+.footer{
+  margin-top: 50px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 </style>
