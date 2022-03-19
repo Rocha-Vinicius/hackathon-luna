@@ -1,9 +1,14 @@
 <template>
 <v-card class="mx-auto">
     <v-card class="mx-auto">
+            <p class="carrinho">
             <v-btn icon>
+                <div>
+                    {{contadorProdutos}}
+                </div>
                 <v-icon>mdi-cart</v-icon>
             </v-btn>
+            </p>
     <v-container fluid>
     <v-row dense>
         <v-col
@@ -28,7 +33,7 @@
             <v-card-title v-text="produto.nome"></v-card-title>
 
             <v-card-actions>
-            <v-btn icon>
+            <v-btn icon @click="contarProdutos()">
                 <v-icon>mdi-cart</v-icon>
             </v-btn>
             <v-card-subtitle> R$: {{ produto.preco }} </v-card-subtitle>
@@ -66,6 +71,7 @@ data() {
     listaProdutos: [],
     url: "https://it3-hbn-default-rtdb.firebaseio.com/ovosPascoa.json",
     show: false,
+    contadorProdutos: 0
     };
 },
 created() {
@@ -75,8 +81,16 @@ created() {
         this.listaProdutos = json;
     });
 },
+methods:{
+    contarProdutos(){
+        this.contadorProdutos++
+    }
+}
 };
 </script>
 
-    <style scoped>
+<style scoped>
+    .carrinho{
+        text-align: right;
+    }
 </style>
